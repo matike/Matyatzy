@@ -1,2 +1,1 @@
-#Aihe:
-Yatzy ilman mitään erityisiä (ainakaan etukäteen suunniteltuja) lisäominaisuuksia.
+###Aihe: # Yatzy ilman mitään erityisiä (ainakaan etukäteen suunniteltuja) lisäominaisuuksia.
