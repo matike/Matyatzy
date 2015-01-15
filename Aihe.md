@@ -5,3 +5,4 @@ Yatzy ilman mitään erityisiä (ainakaan etukäteen suunniteltuja) lisäominaisuuksi
 - Noppien heitto
 - Lista heitettävistä yhdistelmistä
 - Lista parhaista tuloksista
+- Noppien määrän valinta
