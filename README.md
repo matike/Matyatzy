@@ -1,2 +1,2 @@
-# Sepposhakki
-Seppo Chess
+# SeppoYatzy
+Seppo Yatzy
