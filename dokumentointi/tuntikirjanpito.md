@@ -1,4 +1,8 @@
 #Tuntikirjanpito
 
 ###15.1.2015
-Pari tuntia Githubin käyttöön ottoon.
+Pari tuntia Githubin kÃ¤yttÃ¶Ã¶n ottoon.
+
+###22.1.2015
+Hetki luokkakaavion piirtÃ¤miseen
+Muutama tunti ohjelman ja testien kirjoittamiseen
