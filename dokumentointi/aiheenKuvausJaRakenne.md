@@ -1,8 +1,10 @@
 ###Aihe:
-Yatzy ilman mit‰‰n erityisi‰ (ainakaan etuk‰teen suunniteltuja) lis‰ominaisuuksia.
+Yatzy, jota on mahdollista pelata yksin parasta tulosta tavoitellen tai kahdestaan toista pelaajaa vastaan. Parhaat tulokset kirjataan listalle muistiin, jolloin oma tai muiden samaa peli√§ pelanneiden enn√§tys j√§√§ n√§kyville. Peliss√§ on n√§kyvill√§ lista eri yhdistelmist√§, joista valitaan haluamansa klikkaamalla sit√§. Jos yhditelm√§ ei ole oikeanlainen, tulee tulokseksi 0. Peliin saattaa tulla my√∂s mahdollisuus pelata erilaisia muotoja yatzysta.
+
+##K√§ytt√§j√§t:
+Pelaajat, maksimissaan 2
 
 ###Toiminnot:
 - Noppien heitto
-- Lista heitett‰vist‰ yhdistelmist‰
+- Lista heitett√§vist√§ yhdistelmist√§
 - Lista parhaista tuloksista
-- Noppien m‰‰r‰n valinta
