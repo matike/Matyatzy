@@ -2,9 +2,9 @@ package matyatzy.logiikka;
 
 public class Yhdistelmat {
 
-    public int laskeYksittaiset(int silmaluku, Nopat nopat) {
+    private static int laskeYksittaiset(int silmaluku, Nopat nopat) {
         int pisteet = 0;
-        for (Noppa noppa : nopat) {
+        for (Noppa noppa : nopat.getNopat()) {
             if (noppa.getArvo() == silmaluku) {
                 pisteet++;
             }

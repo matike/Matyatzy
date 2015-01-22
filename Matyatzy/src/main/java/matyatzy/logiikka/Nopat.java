@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Nopat extends ArrayList<Noppa> {
 
-    private List<Noppa> nopat;
+    public List<Noppa> nopat;
     private int summa;
 
     public Nopat(int montako) {
@@ -14,6 +14,11 @@ public class Nopat extends ArrayList<Noppa> {
         }
 
     }
+
+    public List<Noppa> getNopat() {
+        return nopat;
+    }
+    
 
     public void heitaKaikkiNopat() {
         for (Noppa noppa : nopat) {
@@ -34,6 +39,11 @@ public class Nopat extends ArrayList<Noppa> {
     public int palautaNopanArvo(int moneskoNoppa) {
         return this.nopat.get(moneskoNoppa-1).getArvo();
     }
+    
+    public void asetaNopanArvo(int moneskoNoppa, int arvo) {
+        this.nopat.get(moneskoNoppa).setArvo(arvo);
+    }
+    
 
     public int laskeNoppienSumma() {
         this.summa = 0;

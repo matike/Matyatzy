@@ -20,7 +20,9 @@ public class Noppa {
     }
 
     public void setArvo(int arvo) {
+        if (arvo >=1 && arvo <=6) {
         this.arvo = arvo;
+        }
     }
 
     
