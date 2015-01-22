@@ -6,7 +6,7 @@ public class Yhdistelmat {
         int pisteet = 0;
         for (Noppa noppa : nopat.getNopat()) {
             if (noppa.getArvo() == silmaluku) {
-                pisteet++;
+                pisteet+=silmaluku;
             }
         }
         return pisteet;
@@ -35,5 +35,10 @@ public class Yhdistelmat {
     public int kuutoset(Nopat nopat) {
         return laskeYksittaiset(6, nopat);
     }
+    
 
+                
+            
+        
+    
 }

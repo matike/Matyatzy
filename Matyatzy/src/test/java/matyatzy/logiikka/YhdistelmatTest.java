@@ -40,7 +40,7 @@ public class YhdistelmatTest {
         assertEquals(2, yhdistelmat.ykkoset(nopat));
         nopat.asetaNopanArvo(5, 1);
         assertEquals(3, yhdistelmat.ykkoset(nopat));
-        
-        
+             
     }
+    
 }

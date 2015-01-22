@@ -18,34 +18,31 @@ public class Nopat extends ArrayList<Noppa> {
     public List<Noppa> getNopat() {
         return nopat;
     }
-    
 
     public void heitaKaikkiNopat() {
         for (Noppa noppa : nopat) {
             noppa.heitaNoppaa();
         }
     }
-    
+
     public void heitaNoppaa(int moneskoNoppa) {
-       this.nopat.get(moneskoNoppa-1).heitaNoppaa();
+        this.nopat.get(moneskoNoppa - 1).heitaNoppaa();
     }
-    
 
     public Noppa palautaNoppa(int moneskoNoppa) {
-        return this.nopat.get(moneskoNoppa-1);
+        return this.nopat.get(moneskoNoppa - 1);
 
     }
 
     public int palautaNopanArvo(int moneskoNoppa) {
-        return this.nopat.get(moneskoNoppa-1).getArvo();
+        return this.nopat.get(moneskoNoppa - 1).getArvo();
     }
-    
-    public void asetaNopanArvo(int moneskoNoppa, int arvo) {
-        this.nopat.get(moneskoNoppa).setArvo(arvo);
-    }
-    
 
-    public int laskeNoppienSumma() {
+    public void asetaNopanArvo(int moneskoNoppa, int arvo) {
+        this.nopat.get(moneskoNoppa - 1).setArvo(arvo);
+    }
+
+    public int palautaNoppienSumma() {
         this.summa = 0;
         for (Noppa noppa : nopat) {
             this.summa += noppa.getArvo();
@@ -53,9 +50,5 @@ public class Nopat extends ArrayList<Noppa> {
         return this.summa;
     }
 
-    public int palautaNoppienSumma() {
-        laskeNoppienSumma();
-        return this.summa;
-    }
 
 }
