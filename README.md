@@ -1,2 +1,2 @@
-# SeppoYatzy
-Seppo Yatzy
+# Matyatzy
+Matyatzy
