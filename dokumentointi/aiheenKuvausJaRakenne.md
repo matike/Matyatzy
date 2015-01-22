@@ -5,6 +5,8 @@ Yatzy, jota on mahdollista pelata yksin parasta tulosta tavoitellen tai kahdesta
 - Pelaajat, maksimissaan 2
 
 ###Toiminnot:
+- Moninpeli samalla tietokoneella
+- Yksinpeli vain itseään vastaan
 - Noppien heitto
 - Lista heitettävistä yhdistelmistä
 - Lista parhaista tuloksista
