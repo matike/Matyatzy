@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 
-package matyatzy.matyatzy;
+package matyatzy.logiikka;
 
+import matyatzy.logiikka.Noppa;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

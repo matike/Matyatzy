@@ -1,5 +1,7 @@
 package matyatzy.matyatzy;
 
+import matyatzy.logiikka.Nopat;
+
 /**
  * Hello world!
  *

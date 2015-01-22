@@ -1,4 +1,4 @@
-package matyatzy.matyatzy;
+package matyatzy.logiikka;
 
 import java.util.*;
 
