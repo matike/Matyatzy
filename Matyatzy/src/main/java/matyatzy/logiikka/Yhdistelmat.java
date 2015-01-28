@@ -47,7 +47,7 @@ public class Yhdistelmat {
     }
 
     public int kolmiluku(Nopat nopat) {
-        for (int i = 0; i <= 6; i++) {
+        for (int i = 1; i <= 6; i++) {
             if (Collections.frequency(nopat.palautaNoppienArvot(), i) >= 3) {
                 return i * 3;
             }
@@ -56,7 +56,7 @@ public class Yhdistelmat {
     }
 
     public int neliluku(Nopat nopat) {
-        for (int i = 0; i <= 6; i++) {
+        for (int i = 1; i <= 6; i++) {
             if (Collections.frequency(nopat.palautaNoppienArvot(), i) >= 4) {
                 return i * 4;
             }
@@ -66,7 +66,7 @@ public class Yhdistelmat {
 
     public int pari(Nopat nopat) {
         int suurinPari = 0;
-        for (int i = 0; i <= 6; i++) {
+        for (int i = 1; i <= 6; i++) {
             if (Collections.frequency(nopat.palautaNoppienArvot(), i) >= 2) {
                 suurinPari = i * 2;
             }
@@ -77,7 +77,7 @@ public class Yhdistelmat {
     public int kaksiParia(Nopat nopat) {
         int parienSumma = 0;
         int parienMaara = 0;
-        for (int i = 0; i <= 6; i++) {
+        for (int i = 1; i <= 6; i++) {
             if (Collections.frequency(nopat.palautaNoppienArvot(), i) >= 2) {
                 parienMaara++;
                 parienSumma += i * 2;
@@ -87,6 +87,50 @@ public class Yhdistelmat {
             return parienSumma;
         }
         return 0;
+    }
+
+    public int mokki(Nopat nopat) {
+        int summa = 0;
+        boolean onkoKolmiluku = false;
+        boolean onkoPari = false;
+
+        for (int i = 1; i <= 6; i++) {
+            if (Collections.frequency(nopat.palautaNoppienArvot(), i) == 2) {
+                summa += i * 2;
+                onkoPari = true;
+            }
+            if (Collections.frequency(nopat.palautaNoppienArvot(), i) == 3) {
+                summa += i * 3;
+                onkoKolmiluku = true;
+            }
+        }
+        if (onkoPari && onkoKolmiluku) {
+            return summa;
+        }
+        return 0;
+
+    }
+
+    //laskee suoran, aloitusluku riippuu suorasta: isossa 2 ja pienessa 1
+    public int suora(int aloitusluku, Nopat nopat) {
+        int onkoSuora = 0;
+        for (int i = aloitusluku; i <= 4 + aloitusluku; i++) {
+            if (nopat.palautaNoppienArvot().contains(i)) {
+                onkoSuora++;
+            }
+        }
+        if (onkoSuora == 5) {
+            return nopat.palautaNoppienSumma();
+        }
+        return 0;
+    }
+
+    public int isoSuora(Nopat nopat) {
+        return suora(2, nopat);
+    }
+
+    public int pieniSuora(Nopat nopat) {
+        return suora(1, nopat);
     }
 
 }

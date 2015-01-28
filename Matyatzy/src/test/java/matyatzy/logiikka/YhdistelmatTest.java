@@ -83,9 +83,50 @@ public class YhdistelmatTest {
         nopat.asetaNopanArvo(4, 5);
         nopat.asetaNopanArvo(5, 5);
         assertEquals(14, yhdistelmat.kaksiParia(nopat));
+        //neliluku ei ole kaksi paria
         nopat.asetaNopanArvo(4, 2);
         nopat.asetaNopanArvo(3, 2);
         assertEquals(0, yhdistelmat.kaksiParia(nopat));
+    }
+
+    @Test
+    public void mokkiLasketaanOikein() {
+        nopat.asetaNopanArvo(1, 2);
+        nopat.asetaNopanArvo(2, 2);
+        nopat.asetaNopanArvo(3, 4);
+        nopat.asetaNopanArvo(4, 5);
+        nopat.asetaNopanArvo(5, 5);
+        assertEquals(0, yhdistelmat.mokki(nopat));
+        nopat.asetaNopanArvo(3, 5);
+        assertEquals(19, yhdistelmat.mokki(nopat));
+        //yatzy ei ole mokki
+        nopat.asetaNopanArvo(1, 5);
+        nopat.asetaNopanArvo(2, 5);
+        assertEquals(0, yhdistelmat.mokki(nopat));
+    }
+
+    @Test
+    public void isoSuoraLasketaanOikein() {
+        nopat.asetaNopanArvo(1, 2);
+        nopat.asetaNopanArvo(2, 4);
+        nopat.asetaNopanArvo(3, 3);
+        nopat.asetaNopanArvo(4, 6);
+        nopat.asetaNopanArvo(5, 5);
+        assertEquals(20, yhdistelmat.isoSuora(nopat));
+        nopat.asetaNopanArvo(1, 1);
+        assertEquals(0, yhdistelmat.isoSuora(nopat));
+    }
+
+    @Test
+    public void pieniSuoraLasketaanOikein() {
+        nopat.asetaNopanArvo(1, 1);
+        nopat.asetaNopanArvo(2, 4);
+        nopat.asetaNopanArvo(3, 3);
+        nopat.asetaNopanArvo(4, 2);
+        nopat.asetaNopanArvo(5, 5);
+        assertEquals(15, yhdistelmat.pieniSuora(nopat));
+        nopat.asetaNopanArvo(1, 2);
+        assertEquals(0, yhdistelmat.pieniSuora(nopat));
     }
 
 }
