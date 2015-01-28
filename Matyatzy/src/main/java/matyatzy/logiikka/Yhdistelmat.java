@@ -133,4 +133,13 @@ public class Yhdistelmat {
         return suora(1, nopat);
     }
 
+    public int yatzy(Nopat nopat) {
+        for (int i = 1; i <= 6; i++) {
+            if (Collections.frequency(nopat.palautaNoppienArvot(), i) >= 5) {
+                return 50;
+            }
+        }
+        return 0;
+    }
+
 }

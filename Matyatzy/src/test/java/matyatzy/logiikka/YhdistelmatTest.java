@@ -129,4 +129,15 @@ public class YhdistelmatTest {
         assertEquals(0, yhdistelmat.pieniSuora(nopat));
     }
 
+    @Test
+    public void yatzyLasketaanOikein() {
+        nopat.asetaNopanArvo(1, 1);
+        nopat.asetaNopanArvo(2, 1);
+        nopat.asetaNopanArvo(3, 1);
+        nopat.asetaNopanArvo(4, 1);
+        nopat.asetaNopanArvo(5, 1);
+        assertEquals(50, yhdistelmat.yatzy(nopat));
+
+    }
+
 }
