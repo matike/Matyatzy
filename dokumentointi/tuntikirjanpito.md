@@ -6,3 +6,6 @@
 ###22.1.2015
 - Hetki luokkakaavion piirtämiseen
 - Muutama tunti ohjelman ja testien kirjoittamiseen
+
+###28.1.2015
+- Tunnin verran ohjelmointia
