@@ -8,31 +8,31 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class YhdistelmatTest {
+
     Yhdistelmat yhdistelmat;
     Nopat nopat;
-    
+
     public YhdistelmatTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
         yhdistelmat = new Yhdistelmat();
         nopat = new Nopat(5);
     }
-    
+
     @After
     public void tearDown() {
     }
 
-    
     @Test
     public void ykkosetLasketaanOikein() {
         nopat.asetaNopanArvo(1, 1);
@@ -40,7 +40,52 @@ public class YhdistelmatTest {
         assertEquals(2, yhdistelmat.ykkoset(nopat));
         nopat.asetaNopanArvo(5, 1);
         assertEquals(3, yhdistelmat.ykkoset(nopat));
-             
+
     }
-    
+
+    @Test
+    public void kolmilukuLasketaanOikein() {
+        nopat.asetaNopanArvo(1, 2);
+        nopat.asetaNopanArvo(2, 1);
+        nopat.asetaNopanArvo(3, 2);
+        nopat.asetaNopanArvo(4, 5);
+        nopat.asetaNopanArvo(5, 2);
+        assertEquals(6, yhdistelmat.kolmiluku(nopat));
+    }
+
+    @Test
+    public void nelilukuLasketaanOikein() {
+        nopat.asetaNopanArvo(1, 2);
+        nopat.asetaNopanArvo(2, 2);
+        nopat.asetaNopanArvo(3, 2);
+        nopat.asetaNopanArvo(4, 5);
+        nopat.asetaNopanArvo(5, 2);
+        assertEquals(6, yhdistelmat.kolmiluku(nopat));
+    }
+
+    @Test
+    public void pariLasketaanOikein() {
+        nopat.asetaNopanArvo(1, 2);
+        nopat.asetaNopanArvo(2, 2);
+        nopat.asetaNopanArvo(3, 4);
+        nopat.asetaNopanArvo(4, 5);
+        nopat.asetaNopanArvo(5, 6);
+        assertEquals(4, yhdistelmat.pari(nopat));
+        nopat.asetaNopanArvo(4, 6);
+        assertEquals(12, yhdistelmat.pari(nopat));
+    }
+
+    @Test
+    public void kaksiPariaLasketaanOikein() {
+        nopat.asetaNopanArvo(1, 2);
+        nopat.asetaNopanArvo(2, 2);
+        nopat.asetaNopanArvo(3, 4);
+        nopat.asetaNopanArvo(4, 5);
+        nopat.asetaNopanArvo(5, 5);
+        assertEquals(14, yhdistelmat.kaksiParia(nopat));
+        nopat.asetaNopanArvo(4, 2);
+        nopat.asetaNopanArvo(3, 2);
+        assertEquals(0, yhdistelmat.kaksiParia(nopat));
+    }
+
 }

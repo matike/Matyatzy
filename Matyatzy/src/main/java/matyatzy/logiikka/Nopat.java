@@ -2,7 +2,7 @@ package matyatzy.logiikka;
 
 import java.util.*;
 
-public class Nopat extends ArrayList<Noppa> {
+public class Nopat {
 
     public List<Noppa> nopat;
     private int summa;
@@ -48,6 +48,14 @@ public class Nopat extends ArrayList<Noppa> {
             this.summa += noppa.getArvo();
         }
         return this.summa;
+    }
+    
+    public List<Integer> palautaNoppienArvot() {
+        ArrayList<Integer> noppienArvot = new ArrayList<>(); 
+        for (Noppa noppa : nopat) {
+            noppienArvot.add(noppa.getArvo());
+        }
+        return noppienArvot;
     }
 
 

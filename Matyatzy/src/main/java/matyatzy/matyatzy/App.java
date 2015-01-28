@@ -16,6 +16,8 @@ public class App {
         
         nopat.heitaKaikkiNopat();
         
+        System.out.println(yhdistelmat.kolmiluku(nopat));
+        
         System.out.println(yhdistelmat.ykkoset(nopat));
         
         System.out.println(yhdistelmat.kakkoset(nopat));
@@ -28,6 +30,10 @@ public class App {
         
         
         System.out.println(yhdistelmat.kuutoset(nopat));
+        
+        for (int i = 0; i<nopat.getNopat().size(); i++) {
+            System.out.println(nopat.getNopat().get(i).getArvo());
+        }
         
         
 
