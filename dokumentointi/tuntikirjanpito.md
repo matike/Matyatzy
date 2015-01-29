@@ -9,3 +9,7 @@
 
 ###28.1.2015
 - Tunnin verran ohjelmointia
+
+###29.1.2015
+- Noin tunti Yhdistelmat-luokan viimeistelyä ja pientä siistimistä aiempaan koodiin
+- Hetki luokkakaavion päivittämiseen
