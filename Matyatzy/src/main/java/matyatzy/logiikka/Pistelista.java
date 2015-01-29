@@ -11,7 +11,7 @@ public class Pistelista {
 
     }
 
-    public void lisaaYhdistelma(String nimi, int pisteet) {
+    public void lisaaYhdistelmanPisteet(String nimi, int pisteet) {
         this.pistelista.put(nimi, pisteet);
     }
     
