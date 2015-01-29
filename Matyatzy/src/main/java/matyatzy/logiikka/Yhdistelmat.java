@@ -1,6 +1,8 @@
 package matyatzy.logiikka;
 
-import java.util.*;
+import java.util.Collections;
+
+
 
 public class Yhdistelmat {
 
@@ -90,28 +92,15 @@ public class Yhdistelmat {
     }
 
     public int mokki(Nopat nopat) {
-        int summa = 0;
-        boolean onkoKolmiluku = false;
-        boolean onkoPari = false;
-
-        for (int i = 1; i <= 6; i++) {
-            if (Collections.frequency(nopat.palautaNoppienArvot(), i) == 2) {
-                summa += i * 2;
-                onkoPari = true;
-            }
-            if (Collections.frequency(nopat.palautaNoppienArvot(), i) == 3) {
-                summa += i * 3;
-                onkoKolmiluku = true;
-            }
-        }
-        if (onkoPari && onkoKolmiluku) {
-            return summa;
-        }
+        //Kahden parin ja kolmiluvun loytyminen takaa, etta nopista muodostuu myos mokki
+        if (kaksiParia(nopat)!=0 && kolmiluku(nopat)!=0) {
+            return nopat.palautaNoppienSumma();
+        } 
         return 0;
 
     }
 
-    //laskee suoran, aloitusluku riippuu suorasta: isossa 2 ja pienessa 1
+    //Laskee suoran. Aloitusluku riippuu suorasta: isossa 2 ja pienessa 1
     public int suora(int aloitusluku, Nopat nopat) {
         int onkoSuora = 0;
         for (int i = aloitusluku; i <= 4 + aloitusluku; i++) {
