@@ -6,6 +6,7 @@ import matyatzy.kayttoliittyma.Kayttoliittyma;
 import matyatzy.logiikka.Nopat;
 import matyatzy.logiikka.Peli;
 import matyatzy.logiikka.Yhdistelmat;
+import matyatzy.logiikka.Pisteet;
 
 /**
  * Hello world!
@@ -19,9 +20,7 @@ public class App {
 
 
 
-                Kayttoliittyma kl = new Kayttoliittyma();
-               SwingUtilities.invokeLater(kl);
-            }
+           }
         
 
         }

@@ -26,7 +26,7 @@ public class YhdistelmatTest {
     @Before
     public void setUp() {
         yhdistelmat = new Yhdistelmat();
-        nopat = new Nopat(5);
+        nopat = new Nopat();
     }
 
     @After
@@ -138,6 +138,16 @@ public class YhdistelmatTest {
         nopat.asetaNopanArvo(5, 1);
         assertEquals(50, yhdistelmat.yatzy(nopat));
 
+    }
+    
+    @Test
+    public void halutunYhdistelmanPistemaaranPalautusToimii() {
+        nopat.asetaNopanArvo(1, 1);
+        nopat.asetaNopanArvo(2, 1);
+        nopat.asetaNopanArvo(3, 1);
+        nopat.asetaNopanArvo(4, 5);
+        nopat.asetaNopanArvo(5, 5);
+        assertEquals(13, yhdistelmat.palautaYhdistelmanPisteet("mokki", nopat));
     }
 
 }

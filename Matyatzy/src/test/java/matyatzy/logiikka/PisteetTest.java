@@ -36,7 +36,7 @@ public class PisteetTest {
     @Before
     public void setUp() {
         yhdistelmat = new Yhdistelmat();
-        nopat = new Nopat(5);
+        nopat = new Nopat();
         pisteet = new Pisteet();
     }
     

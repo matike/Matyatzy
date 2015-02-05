@@ -25,7 +25,7 @@ public class NopatTest {
     
     @Before
     public void setUp() {
-        nopat = new Nopat(5);
+        nopat = new Nopat();
     }
     
     @After

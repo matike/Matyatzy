@@ -7,14 +7,7 @@ public class Pisteet {
     private HashMap<String, Integer> pisteet;
 
     public Pisteet() {
-        this.pisteet = new HashMap<>();
-        this.pisteet.put("ykkoset", null);
-        this.pisteet.put("kakkoset", null);
-        this.pisteet.put("kolmoset", null);
-        this.pisteet.put("neloset", null);
-        this.pisteet.put("viitoset", null);
-        this.pisteet.put("kuutoset", null);
-
+        this.pisteet = new HashMap();
     }
 
     public void lisaaYhdistelmanPisteet(String nimi, int pisteet) {

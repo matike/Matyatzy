@@ -19,9 +19,9 @@ public class Nopat {
      * Luokka tarjoaa noppien käsittelyyn tarvittavia metodeja
      * @param montako Noppien määrä
      */
-    public Nopat(int montako) {
+    public Nopat() {
         this.nopat = new ArrayList<>();
-        for (int i = 0; i < montako; i++) {
+        for (int i = 0; i < 5; i++) {
             this.nopat.add(new Noppa());
         }
 
