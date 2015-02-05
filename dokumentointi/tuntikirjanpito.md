@@ -1,4 +1,4 @@
-#Tuntikirjanpito
+﻿#Tuntikirjanpito
 
 ###15.1.2015
 - Pari tuntia Githubin käyttöön ottoon.
@@ -13,3 +13,6 @@
 ###29.1.2015
 - Noin tunti Yhdistelmat-luokan viimeistelyä ja pientä siistimistä aiempaan koodiin
 - Hetki luokkakaavion päivittämiseen
+
+###5.2.2015
+- Nejä tuntia käyttöliittymän tekoa
