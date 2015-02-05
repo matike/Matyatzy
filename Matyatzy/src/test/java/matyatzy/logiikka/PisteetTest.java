@@ -16,13 +16,13 @@ import static org.junit.Assert.*;
  *
  * @author matti
  */
-public class PistelistaTest {
+public class PisteetTest {
     
     Yhdistelmat yhdistelmat;
     Nopat nopat;
-    Pistelista pistelista;
+    Pisteet pisteet;
     
-    public PistelistaTest() {
+    public PisteetTest() {
     }
     
     @BeforeClass
@@ -37,7 +37,7 @@ public class PistelistaTest {
     public void setUp() {
         yhdistelmat = new Yhdistelmat();
         nopat = new Nopat(5);
-        pistelista = new Pistelista();
+        pisteet = new Pisteet();
     }
     
     @After
@@ -51,7 +51,7 @@ public class PistelistaTest {
         nopat.asetaNopanArvo(3, 2);
         nopat.asetaNopanArvo(4, 5);
         nopat.asetaNopanArvo(5, 2);
-        pistelista.lisaaYhdistelmanPisteet("kolmiluku", yhdistelmat.kolmiluku(nopat));
-        assertEquals(6, pistelista.palautaYhdistelmanPisteet("kolmiluku"));
+        pisteet.lisaaYhdistelmanPisteet("kolmiluku", yhdistelmat.kolmiluku(nopat));
+        assertEquals(6, pisteet.palautaYhdistelmanPisteet("kolmiluku"));
     }
 }

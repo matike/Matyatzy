@@ -1,6 +1,10 @@
 package matyatzy.matyatzy;
 
+import java.awt.EventQueue;
+import javax.swing.SwingUtilities;
+import matyatzy.kayttoliittyma.Kayttoliittyma;
 import matyatzy.logiikka.Nopat;
+import matyatzy.logiikka.Peli;
 import matyatzy.logiikka.Yhdistelmat;
 
 /**
@@ -10,33 +14,14 @@ import matyatzy.logiikka.Yhdistelmat;
 public class App {
 
     public static void main(String[] args) {
-        
-        Nopat nopat = new Nopat(5);
-        Yhdistelmat yhdistelmat = new Yhdistelmat();
-        
-        nopat.heitaKaikkiNopat();
-        
-        System.out.println(yhdistelmat.kolmiluku(nopat));
-        
-        System.out.println(yhdistelmat.ykkoset(nopat));
-        
-        System.out.println(yhdistelmat.kakkoset(nopat));
-        
-        System.out.println(yhdistelmat.kolmoset(nopat));
-        
-        System.out.println(yhdistelmat.neloset(nopat));
-        
-        System.out.println(yhdistelmat.viitoset(nopat));
-        
-        
-        System.out.println(yhdistelmat.kuutoset(nopat));
-        
-        for (int i = 0; i<nopat.getNopat().size(); i++) {
-            System.out.println(nopat.getNopat().get(i).getArvo());
-        }
-        
+
+        Peli peli = new Peli();
+
+
+
+                Kayttoliittyma kl = new Kayttoliittyma();
+               SwingUtilities.invokeLater(kl);
+            }
         
 
-        
-    }
-}
+        }
