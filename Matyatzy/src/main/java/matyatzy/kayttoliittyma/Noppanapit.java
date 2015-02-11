@@ -1,21 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package matyatzy.kayttoliittyma;
 
-import javax.swing.AbstractButton;
-import javax.swing.ButtonGroup;
-import javax.swing.ButtonModel;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JToggleButton;
 
-public class Noppanapit extends ButtonGroup {
+/**
+ *
+ * @author matti
+ */
+public class Noppanapit extends JPanel {
 
+    JToggleButton ykkosnoppa = new JToggleButton();
+    JToggleButton kakkosnoppa = new JToggleButton();
+    JToggleButton kolmosnoppa = new JToggleButton();
+    JToggleButton nelosnoppa = new JToggleButton();
+    JToggleButton viitosnoppa = new JToggleButton();
 
-    
-    
-    public void setSelected() {
-        
-    }
+    JButton heittonappi = new JButton("heitä!");
+    Heitto heitto = new Heitto(this.peli, ykkosnoppa, kakkosnoppa, kolmosnoppa, nelosnoppa, viitosnoppa);
 
-    @Override
-    public ButtonModel getSelection() {
-        return super.getSelection(); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+    heittonappi.addActionListener (heitto);
+
 }

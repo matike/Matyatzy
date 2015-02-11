@@ -16,7 +16,9 @@ public class App {
 
     public static void main(String[] args) {
 
-        Peli peli = new Peli();
+        Kayttoliittyma kl = new Kayttoliittyma();
+        
+        SwingUtilities.invokeLater(kl);
 
 
 
