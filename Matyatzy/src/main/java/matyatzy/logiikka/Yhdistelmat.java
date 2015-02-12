@@ -228,8 +228,8 @@ public class Yhdistelmat {
      * @return
      */
     public int palautaYhdistelmanPisteet(String yhdistelma, Nopat nopat) {
-        switch (yhdistelma) {
-            case "ykkoset":
+        switch (yhdistelma.toLowerCase()) {
+            case "ykköset":
                 return ykkoset(nopat);
             case "kakkoset":
                 return kakkoset(nopat);
@@ -249,7 +249,7 @@ public class Yhdistelmat {
                 return kolmiluku(nopat);
             case "neliluku" :
                 return neliluku(nopat);
-            case "mokki" :
+            case "mökki" :
                 return mokki(nopat);
             case "pieni suora":
                 return pieniSuora(nopat);

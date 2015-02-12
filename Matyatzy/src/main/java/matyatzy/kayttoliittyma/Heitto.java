@@ -38,18 +38,9 @@ public class Heitto implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent ae) {
-        if (this.peli.getPisteetAsetettu()) {
-            for (int j = 0; j <= 4; j++) {
-
-    
-                    this.nopat.heitaNoppaa(j + 1);
-                    this.onkoValittu.get(j).setIcon(this.kuvat[this.nopat.palautaNopanArvo(j + 1)]);
-                    this.peli.onkoPisteetAsetettu(false);
-                }
-        }
+    public void actionPerformed(ActionEvent ae) {   
                 int valittuja = 0;
-                if (this.peli.heittojaJaljella()) {
+                if (this.peli.onkoHeittojaJaljella()) {
                     for (int i = 0; i <= 4; i++) {
 
                         if (this.onkoValittu.get(i).isSelected()) {

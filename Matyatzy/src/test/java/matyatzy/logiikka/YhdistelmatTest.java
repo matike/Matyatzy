@@ -139,7 +139,7 @@ public class YhdistelmatTest {
         assertEquals(50, yhdistelmat.yatzy(nopat));
 
     }
-    
+
     @Test
     public void halutunYhdistelmanPistemaaranPalautusToimii() {
         nopat.asetaNopanArvo(1, 1);
@@ -147,7 +147,35 @@ public class YhdistelmatTest {
         nopat.asetaNopanArvo(3, 1);
         nopat.asetaNopanArvo(4, 5);
         nopat.asetaNopanArvo(5, 5);
-        assertEquals(13, yhdistelmat.palautaYhdistelmanPisteet("mokki", nopat));
-    }
+        assertEquals(3, yhdistelmat.palautaYhdistelmanPisteet("ykköset", nopat));
+        assertEquals(13, yhdistelmat.palautaYhdistelmanPisteet("mökki", nopat));
+        assertEquals(10, yhdistelmat.palautaYhdistelmanPisteet("viitoset", nopat));
+        nopat.asetaNopanArvo(5, 2);
+        assertEquals(2, yhdistelmat.palautaYhdistelmanPisteet("kakkoset", nopat));
+        assertEquals(0, yhdistelmat.palautaYhdistelmanPisteet("kolmoset", nopat));
+        nopat.asetaNopanArvo(4, 4);
+        nopat.asetaNopanArvo(5, 4);
+        assertEquals(8, yhdistelmat.palautaYhdistelmanPisteet("neloset", nopat));
+        assertEquals(0, yhdistelmat.palautaYhdistelmanPisteet("kuutoset", nopat));
+        assertEquals(8, yhdistelmat.palautaYhdistelmanPisteet("pari", nopat));
+        assertEquals(10, yhdistelmat.palautaYhdistelmanPisteet("kaksi paria", nopat));
+        assertEquals(3, yhdistelmat.palautaYhdistelmanPisteet("kolmiluku", nopat));
+        nopat.asetaNopanArvo(4, 1);
+        assertEquals(4, yhdistelmat.palautaYhdistelmanPisteet("neliluku", nopat));
+        nopat.asetaNopanArvo(2, 2);
+        nopat.asetaNopanArvo(3, 3);
+        nopat.asetaNopanArvo(4, 4);
+        nopat.asetaNopanArvo(5, 5);
+        assertEquals(15, yhdistelmat.palautaYhdistelmanPisteet("pieni suora", nopat));
+        nopat.asetaNopanArvo(1, 6);
+        assertEquals(20, yhdistelmat.palautaYhdistelmanPisteet("iso suora", nopat));
+        nopat.asetaNopanArvo(1, 3);
+        nopat.asetaNopanArvo(2, 3);
+        nopat.asetaNopanArvo(3, 3);
+        nopat.asetaNopanArvo(4, 3);
+        nopat.asetaNopanArvo(5, 3);
+        assertEquals(15, yhdistelmat.palautaYhdistelmanPisteet("sattuma", nopat));
+        assertEquals(50, yhdistelmat.palautaYhdistelmanPisteet("yatzy", nopat));
 
+    }
 }

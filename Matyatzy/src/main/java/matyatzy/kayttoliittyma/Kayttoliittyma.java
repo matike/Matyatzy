@@ -44,7 +44,7 @@ public class Kayttoliittyma implements Runnable {
         JButton heittonappi = new JButton("heitä!");
         Heitto heitto = new Heitto(this.peli, ykkosnoppa, kakkosnoppa, kolmosnoppa, nelosnoppa, viitosnoppa);
         heittonappi.addActionListener(heitto);
-
+        
 
         container.setLayout(layout);
         container.add(pistelista);

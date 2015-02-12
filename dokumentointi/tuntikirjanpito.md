@@ -16,3 +16,9 @@
 
 ###5.2.2015
 - Nejä tuntia käyttöliittymän tekoa
+
+###11.2.2015
+- Neljä tuntia käyttöliittymän tekoa
+
+###12.2.2015
+- Pari tuntia sekvenssikaavioiden tekoa ja testien lisäilyä
