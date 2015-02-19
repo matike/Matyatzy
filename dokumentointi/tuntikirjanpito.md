@@ -22,3 +22,6 @@
 
 ###12.2.2015
 - Pari tuntia sekvenssikaavioiden tekoa ja testien lisäilyä
+
+###19.2.2015
+- Useampi tunti käyttöliittymän ja toiminnan viimeistelyä demoa varten
