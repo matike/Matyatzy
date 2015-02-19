@@ -6,7 +6,6 @@ public class Peli extends Yhdistelmat {
 
     //private String[] mahdollisetYhdistelmat = {"ykköset", "kakkoset", "kolmoset", "neloset", "viitoset", "kuutoset", "pari", "kaksi paria", "kolmiluku", "neliluku", "mökki", "pieni suora", "iso suora", "sattuma", "yatzy"};
     private Nopat nopat;
-    private Yhdistelmat yhdistelmat;
     private int monestiHeitetty;
     private HashMap<String, Integer> pisteet;
     private boolean pisteetAsetettu;

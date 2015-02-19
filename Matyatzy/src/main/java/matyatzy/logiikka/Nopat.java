@@ -22,6 +22,7 @@ public class Nopat {
     public Nopat() {
         this.nopat = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
+            
             this.nopat.add(new Noppa());
         }
 

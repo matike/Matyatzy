@@ -73,4 +73,27 @@ public class PeliTest {
         this.peli.nollaaHeitot();
         assertEquals(true, this.peli.onkoHeittojaJaljella());
     }
+    
+    @Test
+    public void toimiikoPisteidenAsetuksenTarkistus() {
+        assertEquals(false, this.peli.getPisteetAsetettu());
+        this.peli.onkoPisteetAsetettu(true);
+        assertEquals(true, this.peli.getPisteetAsetettu());
+    }
+    
+    @Test
+    public void toimiikoBonuksenTarkistus() {
+        assertEquals(false, this.peli.onkoBonus());
+        this.peli.lisaaPisteet("ykköset", 3);
+        this.peli.lisaaPisteet("kakkoset", 6);
+        this.peli.lisaaPisteet("kolmoset", 9);
+        this.peli.lisaaPisteet("neloset", 12);
+        this.peli.lisaaPisteet("viitoset", 15);
+        this.peli.lisaaPisteet("kuutoset", 0);
+        assertEquals(false, this.peli.onkoBonus());
+        this.peli.lisaaPisteet("kuutoset", 18);
+        assertEquals(true, this.peli.onkoBonus());
+        this.peli.lisaaPisteet("kuutoset", 24);
+        assertEquals(true, this.peli.onkoBonus());
+    }
 }
