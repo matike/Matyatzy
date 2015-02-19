@@ -17,7 +17,7 @@ public class Peli extends Yhdistelmat {
     public Peli() {
         this.pisteet = new HashMap();
         this.nopat = new Nopat();
-        this.pisteetAsetettu = true;
+        this.pisteetAsetettu = false;
     }
 
     /**
@@ -76,7 +76,7 @@ public class Peli extends Yhdistelmat {
         if (this.pisteet.containsKey(yhdistelma)) {
             return this.pisteet.get(yhdistelma);
         }
-        return -1;
+        return 0;
     }
 
     /**
@@ -105,4 +105,28 @@ public class Peli extends Yhdistelmat {
     public boolean getPisteetAsetettu() {
         return this.pisteetAsetettu;
     }
+
+    public boolean onkoBonus() {
+        int bonus = 0;
+        bonus += palautaYhdistelmanPisteet("ykköset");
+        bonus += palautaYhdistelmanPisteet("kakkoset");
+        bonus += palautaYhdistelmanPisteet("kolmoset");
+        bonus += palautaYhdistelmanPisteet("neloset");
+        bonus += palautaYhdistelmanPisteet("viitoset");
+        bonus += palautaYhdistelmanPisteet("kuutoset");
+        if (bonus >= 63) {
+            return true;
+        }
+        return false;
+    }
+
+    public int getMonestiHeitetty() {
+        return monestiHeitetty;
+    }
+
+    public HashMap<String, Integer> getPisteet() {
+        return pisteet;
+    }
+    
+    
 }

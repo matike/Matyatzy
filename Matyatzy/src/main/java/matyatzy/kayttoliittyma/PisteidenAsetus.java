@@ -1,4 +1,3 @@
-
 package matyatzy.kayttoliittyma;
 
 import javax.swing.JTable;
@@ -11,26 +10,35 @@ public class PisteidenAsetus implements ListSelectionListener {
 
     private JTable table;
     private Peli peli;
-   
 
     public PisteidenAsetus(JTable table, Peli peli) {
         this.table = table;
         this.peli = peli;
-       
+
     }
 
+    @Override
     public void valueChanged(ListSelectionEvent event) {
-        
-        int valittuRivi = table.getSelectedRow();
-        int yhdistelmanPisteet = this.peli.palautaYhdistelmanPisteet(table.getValueAt(valittuRivi, 0).toString(), this.peli.palautaNopat());
-        String yhdistelmanNimi = table.getValueAt(valittuRivi, 0).toString();
-        this.peli.lisaaPisteet(yhdistelmanNimi, yhdistelmanPisteet);
-        table.setValueAt(yhdistelmanPisteet, valittuRivi, 1);
-        
+        if (!this.peli.getPisteetAsetettu()) {
+            int valittuRivi = table.getSelectedRow();
+            String yhdistelmanNimi = table.getValueAt(valittuRivi, 0).toString().toLowerCase();
+            if (valittuRivi != 6 && valittuRivi != 16 && this.peli.getPisteet().containsKey(yhdistelmanNimi) == false) {
+                int yhdistelmanPisteet = this.peli.palautaYhdistelmanPisteet(yhdistelmanNimi, this.peli.palautaNopat());
+
+                this.peli.lisaaPisteet(yhdistelmanNimi, yhdistelmanPisteet);
+                table.setValueAt(yhdistelmanPisteet, valittuRivi, 1);
+            }
+        }
+        this.peli.onkoPisteetAsetettu(true);
+        this.peli.nollaaHeitot();
+
         table.setValueAt(this.peli.palautaYhteisPisteet(), 16, 1);
+        if (this.peli.onkoBonus()) {
+            table.setValueAt(50, 6, 1);
+            this.peli.lisaaPisteet("bonus", 50);
+        }
         table.repaint();
-        
-        
+
     }
 
 }

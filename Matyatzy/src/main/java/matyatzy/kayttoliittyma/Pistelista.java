@@ -33,7 +33,6 @@ public class Pistelista extends JPanel {
 
         table.getSelectionModel().addListSelectionListener(new PisteidenAsetus(table, this.peli));
         table.setValueAt(this.peli.palautaYhteisPisteet(), 16, 1);
-        
 
     }
 

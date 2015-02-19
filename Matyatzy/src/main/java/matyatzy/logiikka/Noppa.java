@@ -16,7 +16,7 @@ public class Noppa {
     }
        
     /**
-     * Metodi palauttaa satunnaisen luvun valilta 1-6
+     * Metodi palauttaa satunnaisen kokonaisluvun väliltä 1-6
      */
     public void heitaNoppaa() {       
         this.arvo = this.random.nextInt(6)+1;

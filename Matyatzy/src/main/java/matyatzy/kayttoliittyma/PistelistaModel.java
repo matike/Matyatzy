@@ -4,7 +4,7 @@ import javax.swing.table.AbstractTableModel;
 
 public class PistelistaModel extends AbstractTableModel {
 
-    Object[][] data = {{"Ykköset", 0}, {"Kakkoset", 0}, {"Kolmoset", 0}, {"Neloset", 0}, {"Viitoset", 0}, {"Kuutoset", 0}, {"Bonus", 0}, {"Pari", 0}, {"Kaksi paria", 0}, {"Kolmiluku", 0}, {"Neliluku", 0}, {"Mökki", 0}, {"Pieni suora", 0}, {"Iso suora", 0}, {"Sattuma", 0}, {"Yatzy", 0}, {"Yhteensa", 0}};
+    Object[][] data = {{"Ykköset", null}, {"Kakkoset", null}, {"Kolmoset", null}, {"Neloset", null}, {"Viitoset", null}, {"Kuutoset", null}, {"Bonus", 0}, {"Pari", null}, {"Kaksi paria", null}, {"Kolmiluku", null}, {"Neliluku", null}, {"Mökki", null}, {"Pieni suora", null}, {"Iso suora", null}, {"Sattuma", null}, {"Yatzy", null}, {"Yhteensä", null}};
     String[] columnNames = {"Yhdistelmä",
         "Pisteet"};
 

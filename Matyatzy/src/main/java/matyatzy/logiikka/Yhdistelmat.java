@@ -3,13 +3,17 @@ package matyatzy.logiikka;
 import java.util.Collections;
 
 /**
- * Luokka käsittelee Yatzyssa vaadittavia noppien yhdistelmiä ja laskee niiden pisteet annetuilla nopilla
+ * Luokka käsittelee Yatzyssa vaadittavia noppien yhdistelmiä ja laskee niiden
+ * pisteet annetuilla nopilla
+ *
  * @author matti
  */
 public class Yhdistelmat {
-    
+
     /**
-     * Metodi toimii apumetodina monta samaa arvoa sisältävien yhdistelmien laskemiseen
+     * Metodi toimii apumetodina monta samaa arvoa sisältävien yhdistelmien
+     * laskemiseen
+     *
      * @param silmaluku
      * @param nopat
      * @return
@@ -26,6 +30,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet ykkosista
+     *
      * @param nopat
      * @return
      */
@@ -35,6 +40,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet kakkosista
+     *
      * @param nopat
      * @return
      */
@@ -44,6 +50,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet kolmosista
+     *
      * @param nopat
      * @return
      */
@@ -53,6 +60,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet nelosista
+     *
      * @param nopat
      * @return
      */
@@ -62,6 +70,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet viitosista
+     *
      * @param nopat
      * @return
      */
@@ -71,6 +80,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet kuutosista
+     *
      * @param nopat
      * @return
      */
@@ -80,6 +90,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet sattumasta
+     *
      * @param nopat
      * @return
      */
@@ -93,6 +104,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet kolmiluvusta
+     *
      * @param nopat
      * @return
      */
@@ -107,6 +119,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet neliluvusta
+     *
      * @param nopat
      * @return
      */
@@ -121,6 +134,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet parista
+     *
      * @param nopat
      * @return
      */
@@ -136,6 +150,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet kahdesta parista
+     *
      * @param nopat
      * @return
      */
@@ -156,6 +171,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet mökistä
+     *
      * @param nopat
      * @return
      */
@@ -169,14 +185,14 @@ public class Yhdistelmat {
     }
 
     //Laskee suoran. Aloitusluku riippuu suorasta: isossa 2 ja pienessa 1
-
     /**
      * Metodi toimii apumetodina suorien laskemiseen
+     *
      * @param aloitusluku
      * @param nopat
      * @return
      */
-        public int suora(int aloitusluku, Nopat nopat) {
+    public int suora(int aloitusluku, Nopat nopat) {
         int onkoSuora = 0;
         for (int i = aloitusluku; i <= 4 + aloitusluku; i++) {
             if (nopat.palautaNoppienArvot().contains(i)) {
@@ -191,6 +207,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet isosta suorasta
+     *
      * @param nopat
      * @return
      */
@@ -200,6 +217,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet pienestä suorasta
+     *
      * @param nopat
      * @return
      */
@@ -209,6 +227,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa annettujen noppien pisteet yatzysta
+     *
      * @param nopat
      * @return
      */
@@ -223,6 +242,7 @@ public class Yhdistelmat {
 
     /**
      * Metodi palauttaa sille parametrina annetun yhdistelman pisteet
+     *
      * @param yhdistelma yhdistelman nimi
      * @param nopat
      * @return
@@ -245,11 +265,11 @@ public class Yhdistelmat {
                 return pari(nopat);
             case "kaksi paria":
                 return kaksiParia(nopat);
-            case "kolmiluku" :
+            case "kolmiluku":
                 return kolmiluku(nopat);
-            case "neliluku" :
+            case "neliluku":
                 return neliluku(nopat);
-            case "mökki" :
+            case "mökki":
                 return mokki(nopat);
             case "pieni suora":
                 return pieniSuora(nopat);
@@ -261,7 +281,7 @@ public class Yhdistelmat {
                 return yatzy(nopat);
         }
         return 0;
-        
+
     }
 
 }

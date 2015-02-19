@@ -38,27 +38,35 @@ public class Heitto implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent ae) {   
-                int valittuja = 0;
-                if (this.peli.onkoHeittojaJaljella()) {
-                    for (int i = 0; i <= 4; i++) {
+    public void actionPerformed(ActionEvent ae) {
+        int valittuja = 0;
 
-                        if (this.onkoValittu.get(i).isSelected()) {
-                            valittuja++;
-                            this.nopat.heitaNoppaa(i + 1);
-                            this.onkoValittu.get(i).setIcon(this.kuvat[this.nopat.palautaNopanArvo(i + 1)]);
-                        }
-                    }
-                    if (valittuja > 0) {
-                        this.peli.lisaaHeitto();
-                    }
-
+        if (this.peli.onkoHeittojaJaljella()) {
+            for (int i = 0; i <= 4; i++) {
+                if (this.peli.getMonestiHeitetty() == 0) {
+                    valittuja++;
+                    this.nopat.heitaNoppaa(i + 1);
+                    this.onkoValittu.get(i).setIcon(this.kuvat[this.nopat.palautaNopanArvo(i + 1)]);                
                 }
 
-                System.out.println(this.nopat.palautaNopanArvo(1));
-                System.out.println(this.nopat.palautaNopanArvo(2));
-                System.out.println(this.nopat.palautaNopanArvo(3));
-                System.out.println(this.nopat.palautaNopanArvo(4));
-                System.out.println(this.nopat.palautaNopanArvo(5));
+                else if (this.onkoValittu.get(i).isSelected()) {
+                    valittuja++;
+                    this.nopat.heitaNoppaa(i + 1);
+                    this.onkoValittu.get(i).setIcon(this.kuvat[this.nopat.palautaNopanArvo(i + 1)]);                 
+                }
+                
             }
+            if (valittuja > 0) {
+                this.peli.lisaaHeitto();
+            }
+            this.peli.onkoPisteetAsetettu(false);
+
         }
+
+        System.out.println(this.nopat.palautaNopanArvo(1));
+        System.out.println(this.nopat.palautaNopanArvo(2));
+        System.out.println(this.nopat.palautaNopanArvo(3));
+        System.out.println(this.nopat.palautaNopanArvo(4));
+        System.out.println(this.nopat.palautaNopanArvo(5));
+    }
+}
