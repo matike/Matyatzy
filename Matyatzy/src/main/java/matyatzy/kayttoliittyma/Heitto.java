@@ -8,6 +8,10 @@ import javax.swing.JToggleButton;
 import matyatzy.logiikka.Nopat;
 import matyatzy.logiikka.Peli;
 
+/**
+ *Tapahtumankuunteluluokka, joka heittää joko kaikki nopat tai valitut nopat
+ * @author matti
+ */
 public class Heitto implements ActionListener {
 
     private ImageIcon[] kuvat;
@@ -21,10 +25,19 @@ public class Heitto implements ActionListener {
     private JToggleButton neljas;
     private JToggleButton viides;
 
+    /**
+     *
+     * @param peli peli, jonka noppia heitetään
+     * @param eka ensimmäisen nopan JToggleButton
+     * @param toka toisen nopan JToggleButton
+     * @param kolmas kolmannen nopan JToggleButton
+     * @param neljas neljännen nopan JToggleButton
+     * @param viides viidennen nopan JToggleButton
+     */
     public Heitto(Peli peli, JToggleButton eka, JToggleButton toka, JToggleButton kolmas, JToggleButton neljas, JToggleButton viides) {
         this.kuvat = new ImageIcon[7];
         for (int i = 1; i <= 6; i++) {
-            this.kuvat[i] = new ImageIcon("images/" + i + ".png");
+            this.kuvat[i] = new ImageIcon((getClass().getResource("/" + i + ".png")));
         }
         this.peli = peli;
         this.nopat = peli.palautaNopat();
@@ -62,11 +75,5 @@ public class Heitto implements ActionListener {
             this.peli.onkoPisteetAsetettu(false);
 
         }
-
-        System.out.println(this.nopat.palautaNopanArvo(1));
-        System.out.println(this.nopat.palautaNopanArvo(2));
-        System.out.println(this.nopat.palautaNopanArvo(3));
-        System.out.println(this.nopat.palautaNopanArvo(4));
-        System.out.println(this.nopat.palautaNopanArvo(5));
     }
 }

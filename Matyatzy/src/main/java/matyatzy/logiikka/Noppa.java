@@ -3,7 +3,7 @@ package matyatzy.logiikka;
 import java.util.*;
 
 /**
- * Luokka tarjoaa metodeja nopan arvon käsittelyä ja arpomista varten
+ * Luokka tarjoaa metodeja nopan arvon käsittelyä ja arpomista varten.
  * @author matti
  */
 public class Noppa {
@@ -11,12 +11,15 @@ public class Noppa {
     private Random random;
     private int arvo;
     
+    /**
+     *Luo uuden Noppa-olion.
+     */
     public Noppa() {
         this.random = new Random();
     }
        
     /**
-     * Metodi palauttaa satunnaisen kokonaisluvun väliltä 1-6
+     * Metodi palauttaa satunnaisen kokonaisluvun väliltä 1-6.
      */
     public void heitaNoppaa() {       
         this.arvo = this.random.nextInt(6)+1;

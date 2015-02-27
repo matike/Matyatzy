@@ -16,7 +16,7 @@ public class Nopat {
     private int summa;
 
     /**
-     * Luokka tarjoaa noppien käsittelyyn tarvittavia metodeja
+     * Luo uuden Nopat-olion.
      * @param montako Noppien määrä
      */
     public Nopat() {
@@ -33,7 +33,7 @@ public class Nopat {
     }
 
     /**
-     * Metodi heittää kaikki nopat
+     * Metodi heittää kaikki nopat.
      */
     public void heitaKaikkiNopat() {
         for (Noppa noppa : nopat) {
@@ -42,7 +42,7 @@ public class Nopat {
     }
 
     /**
-     * Metodi heittaa tiettyä noppaa. Nopan järjestysluku annetaan parametrina
+     * Metodi heittaa tiettyä noppaa. Nopan järjestysluku annetaan parametrina.
      * @param moneskoNoppa Monesko noppa heitetään
      */
     public void heitaNoppaa(int moneskoNoppa) {
@@ -50,9 +50,9 @@ public class Nopat {
     }
 
     /**
-     * Metodi palauttaa tietyn nopan
+     * Metodi palauttaa tietyn nopan.
      * @param moneskoNoppa Monesko noppa heitetään
-     * @return
+     * @return Noppa jonka järjestysluku annettiin parametrinä
      */
     public Noppa palautaNoppa(int moneskoNoppa) {
         return this.nopat.get(moneskoNoppa - 1);
@@ -60,16 +60,16 @@ public class Nopat {
     }
 
     /**
-     * Metodi palauttaa tietyn nopan arvon
+     * Metodi palauttaa tietyn nopan arvon.
      * @param moneskoNoppa Monennen nopan arvo palautetaan
-     * @return nopan arvo
+     * @return Nopan arvo
      */
     public int palautaNopanArvo(int moneskoNoppa) {
         return this.nopat.get(moneskoNoppa - 1).getArvo();
     }
 
     /**
-     * Metodilla saa asetettua tietylle nopalle arvon
+     * Metodilla saa asetettua tietylle nopalle arvon.
      * @param moneskoNoppa Monennen nopan arvo muutetaan
      * @param arvo
      */
@@ -78,7 +78,7 @@ public class Nopat {
     }
 
     /**
-     * Metodi palauttaa kaikkien noppien summan
+     * Metodi palauttaa kaikkien noppien summan.
      * @return noppien summa
      */
     public int palautaNoppienSumma() {
@@ -90,7 +90,7 @@ public class Nopat {
     }
     
     /**
-     * Metodi palauttaa kaikkien noppien arvot listana
+     * Metodi palauttaa kaikkien noppien arvot listana.
      * @return noppien arvot listana
      */
     public List<Integer> palautaNoppienArvot() {

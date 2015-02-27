@@ -3,17 +3,25 @@ package matyatzy.kayttoliittyma;
 import javax.swing.JTable;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import matyatzy.huipputulokset.Huipputulokset;
 import matyatzy.logiikka.Peli;
 import matyatzy.logiikka.Yhdistelmat;
 
+/**
+ * Tapahtumankuunteluluokka, joka lisää pisteet listalle riviä klikattaessa.
+ * @author matti
+ */
 public class PisteidenAsetus implements ListSelectionListener {
 
     private JTable table;
     private Peli peli;
+    private Huipputulokset tulokset;
 
     public PisteidenAsetus(JTable table, Peli peli) {
         this.table = table;
         this.peli = peli;
+        this.tulokset = new Huipputulokset();
+        this.tulokset.lataaPisteetTiedostosta();
 
     }
 
@@ -28,15 +36,23 @@ public class PisteidenAsetus implements ListSelectionListener {
                 this.peli.lisaaPisteet(yhdistelmanNimi, yhdistelmanPisteet);
                 table.setValueAt(yhdistelmanPisteet, valittuRivi, 1);
             }
+            //Tarkistaa onko peli loppu, ja jos peli on loppu ja tulos yltää huipputulosten listalle, avautuu ikkuna, johon syötetään nimi
+            if (peli.onkoPeliLoppu()) {
+                if (this.tulokset.onkoHuipputulos(this.peli.palautaYhteispisteet())) {
+                TuloksenLisaysIkkuna lisays = new TuloksenLisaysIkkuna(this.peli);
+                }
+                
+            }
         }
         this.peli.onkoPisteetAsetettu(true);
         this.peli.nollaaHeitot();
 
-        table.setValueAt(this.peli.palautaYhteisPisteet(), 16, 1);
+        table.setValueAt(this.peli.palautaYhteispisteet(), 16, 1);
         if (this.peli.onkoBonus()) {
             table.setValueAt(50, 6, 1);
             this.peli.lisaaPisteet("bonus", 50);
         }
+
         table.repaint();
 
     }

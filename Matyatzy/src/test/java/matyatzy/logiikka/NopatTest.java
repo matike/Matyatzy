@@ -1,6 +1,6 @@
 package matyatzy.logiikka;
 
-import matyatzy.logiikka.Nopat;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

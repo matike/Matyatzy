@@ -1,28 +1,21 @@
 package matyatzy.matyatzy;
 
-import java.awt.EventQueue;
 import javax.swing.SwingUtilities;
 import matyatzy.kayttoliittyma.Kayttoliittyma;
-import matyatzy.logiikka.Nopat;
+import matyatzy.huipputulokset.Huipputulokset;
 import matyatzy.logiikka.Peli;
-import matyatzy.logiikka.Yhdistelmat;
-import matyatzy.logiikka.Pisteet;
 
-/**
- * Hello world!
- *
- */
 public class App {
 
     public static void main(String[] args) {
 
-        Kayttoliittyma kl = new Kayttoliittyma();
-        
+        Huipputulokset tulokset = new Huipputulokset();
+        tulokset.lataaPisteetTiedostosta();
+
+        Peli peli = new Peli();
+        Kayttoliittyma kl = new Kayttoliittyma(peli);
         SwingUtilities.invokeLater(kl);
 
+    }
 
-
-           }
-        
-
-        }
+}

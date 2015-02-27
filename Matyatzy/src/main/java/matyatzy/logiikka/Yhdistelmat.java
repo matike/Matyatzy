@@ -4,19 +4,27 @@ import java.util.Collections;
 
 /**
  * Luokka käsittelee Yatzyssa vaadittavia noppien yhdistelmiä ja laskee niiden
- * pisteet annetuilla nopilla
+ * pisteet annetuilla nopilla.
  *
  * @author matti
  */
 public class Yhdistelmat {
 
     /**
+     *Luo uuden Yhdistelmat-olion.
+     */
+    public Yhdistelmat() {
+        
+    }
+    
+
+    /**
      * Metodi toimii apumetodina monta samaa arvoa sisältävien yhdistelmien
-     * laskemiseen
+     * laskemiseen.
      *
-     * @param silmaluku
-     * @param nopat
-     * @return
+     * @param silmaluku minkä silmälukuisten noppien pistemäärä halutaan laskea
+     * @param nopat Nopat-olio
+     * @return halutunlaisten noppien pistemäärä
      */
     private static int laskeYksittaiset(int silmaluku, Nopat nopat) {
         int pisteet = 0;
@@ -29,70 +37,70 @@ public class Yhdistelmat {
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet ykkosista
+     * Metodi palauttaa annettujen noppien pisteet ykkosista.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return ykkösten pistemäärä annetuilla nopilla
      */
     public int ykkoset(Nopat nopat) {
         return laskeYksittaiset(1, nopat);
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet kakkosista
+     * Metodi palauttaa annettujen noppien pisteet kakkosista.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return kakkosten pistemäärä annetuilla nopilla
      */
     public int kakkoset(Nopat nopat) {
         return laskeYksittaiset(2, nopat);
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet kolmosista
+     * Metodi palauttaa annettujen noppien pisteet kolmosista.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return kolmosten pistemäärä annetuilla nopilla
      */
     public int kolmoset(Nopat nopat) {
         return laskeYksittaiset(3, nopat);
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet nelosista
+     * Metodi palauttaa annettujen noppien pisteet nelosista.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return nelosten pistemäärä annetuilla nopilla
      */
     public int neloset(Nopat nopat) {
         return laskeYksittaiset(4, nopat);
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet viitosista
+     * Metodi palauttaa annettujen noppien pisteet viitosista.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return viitosten pistemäärä annetuilla nopilla
      */
     public int viitoset(Nopat nopat) {
         return laskeYksittaiset(5, nopat);
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet kuutosista
+     * Metodi palauttaa annettujen noppien pisteet kuutosista.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return kuutosten pistemäärä annetuilla nopilla
      */
     public int kuutoset(Nopat nopat) {
         return laskeYksittaiset(6, nopat);
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet sattumasta
+     * Metodi palauttaa annettujen noppien pisteet sattumasta.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return sattuman pistemäärä annetuilla nopilla
      */
     public int sattuma(Nopat nopat) {
         int summa = 0;
@@ -103,10 +111,10 @@ public class Yhdistelmat {
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet kolmiluvusta
+     * Metodi palauttaa annettujen noppien pisteet kolmiluvusta.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return kolmiluvun pistemäärä annetuilla nopilla
      */
     public int kolmiluku(Nopat nopat) {
         for (int i = 1; i <= 6; i++) {
@@ -118,10 +126,10 @@ public class Yhdistelmat {
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet neliluvusta
+     * Metodi palauttaa annettujen noppien pisteet neliluvusta.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return neliluvun pistemäärä annetuilla nopilla
      */
     public int neliluku(Nopat nopat) {
         for (int i = 1; i <= 6; i++) {
@@ -133,10 +141,10 @@ public class Yhdistelmat {
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet parista
+     * Metodi palauttaa annettujen noppien pisteet parista.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return parin pistemäärä annetuilla nopilla
      */
     public int pari(Nopat nopat) {
         int suurinPari = 0;
@@ -149,10 +157,10 @@ public class Yhdistelmat {
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet kahdesta parista
+     * Metodi palauttaa annettujen noppien pisteet kahdesta parista.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return kahden parin pistemäärä annetuilla nopilla
      */
     public int kaksiParia(Nopat nopat) {
         int parienSumma = 0;
@@ -170,10 +178,10 @@ public class Yhdistelmat {
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet mökistä
+     * Metodi palauttaa annettujen noppien pisteet mökistä.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return mökin pistemäärä annetuilla nopilla
      */
     public int mokki(Nopat nopat) {
         //Kahden parin ja kolmiluvun loytyminen takaa, etta nopista muodostuu myos mokki
@@ -184,14 +192,16 @@ public class Yhdistelmat {
 
     }
 
-    //Laskee suoran. Aloitusluku riippuu suorasta: isossa 2 ja pienessa 1
+    
     /**
-     * Metodi toimii apumetodina suorien laskemiseen
+     * Metodi toimii apumetodina suorien laskemiseen.
      *
-     * @param aloitusluku
-     * @param nopat
-     * @return
+     * @param aloitusluku isossa suorssa 2, pienessä 1.
+     * @param nopat Nopat-olio
+     * @return halutunlaisten suoran (iso tai pieni) pistemäärä annetuilla nopilla
      */
+    
+    //Laskee suoran. Aloitusluku riippuu suorasta: isossa 2 ja pienessa 1
     public int suora(int aloitusluku, Nopat nopat) {
         int onkoSuora = 0;
         for (int i = aloitusluku; i <= 4 + aloitusluku; i++) {
@@ -206,30 +216,30 @@ public class Yhdistelmat {
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet isosta suorasta
+     * Metodi palauttaa annettujen noppien pisteet isosta suorasta.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return ison suoran pistemäärä annetuilla nopilla
      */
     public int isoSuora(Nopat nopat) {
         return suora(2, nopat);
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet pienestä suorasta
+     * Metodi palauttaa annettujen noppien pisteet pienestä suorasta.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return pienen suoran pistemäärä annetuilla nopilla
      */
     public int pieniSuora(Nopat nopat) {
         return suora(1, nopat);
     }
 
     /**
-     * Metodi palauttaa annettujen noppien pisteet yatzysta
+     * Metodi palauttaa annettujen noppien pisteet yatzysta.
      *
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return yatzyn pistemäärä annetuilla nopilla
      */
     public int yatzy(Nopat nopat) {
         for (int i = 1; i <= 6; i++) {
@@ -241,11 +251,11 @@ public class Yhdistelmat {
     }
 
     /**
-     * Metodi palauttaa sille parametrina annetun yhdistelman pisteet
+     * Metodi palauttaa sille parametrina annetun yhdistelman pisteet.
      *
      * @param yhdistelma yhdistelman nimi
-     * @param nopat
-     * @return
+     * @param nopat Nopat-olio
+     * @return Noppien pisteet annetusta yhdistelmästä
      */
     public int palautaYhdistelmanPisteet(String yhdistelma, Nopat nopat) {
         switch (yhdistelma.toLowerCase()) {

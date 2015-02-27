@@ -1,0 +1,9 @@
+Valitse nopat klikkaamalla niitä. Valitun nopan tunnistat vihreistä reunoista. Klikkaamalla heittonappia heität valitsemasi nopat.  Ensimmäisellä heitolla on kuitenkin heitettävä kaikki nopat, joten niitä ei tarvitse valita erikseen. Saat heittää kolme kertaa ja kolmannella heitolla pisteet on laitettava jollekin listan riville klikkaamalla riviä. Kaikkia kolmea heittoa ei ole pakko käyttää. Uuden pelin voit aloittaa käynnistämällä pelin uudelleen.
+
+Bonuksena saat 50 pistettä, jos ykkösten, kakkosten, kolmosten, nelosten, viitosten ja kuutosten summa ylittää 63.
+
+Mökki: kolmiluku ja pari
+Yatzy: viisi samaa noppaa
+Pieni suora: 1, 2, 3, 4, 5
+Iso suora: 2, 3, 4, 5, 6
+Sattuma: kaikkien noppien summa

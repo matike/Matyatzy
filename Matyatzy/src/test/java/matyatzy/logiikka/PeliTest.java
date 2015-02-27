@@ -60,7 +60,7 @@ public class PeliTest {
         this.peli.lisaaPisteet("mökki", 12);
         this.peli.lisaaPisteet("yatzy", 50);
         this.peli.lisaaPisteet("pari", 10);
-        assertEquals(73, this.peli.palautaYhteisPisteet());
+        assertEquals(73, this.peli.palautaYhteispisteet());
     }
     
     @Test
