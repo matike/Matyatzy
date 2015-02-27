@@ -25,3 +25,9 @@
 
 ###19.2.2015
 - Useampi tunti käyttöliittymän ja toiminnan viimeistelyä demoa varten
+
+###26.2.2015
+- Käyttöliittymän viimeistelyä ja huipputuloslistan lisäys
+
+###27.2.2015
+- Javadocien viimeistelyä, sekvenssikaavioita ja muuta viimeistä deadlinea varten tehtäviä asioita
